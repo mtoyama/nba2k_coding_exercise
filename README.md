@@ -52,3 +52,6 @@ Badge Efficiency Helper
 Attribute Efficiency Helper
 `(0.2 * (100 * (Total Initial Rating (Player) / Maximum Total Initial Rating (All Players) ))) + (0.8 * (100 * Total Rating w/ Caps (Player) / Maximum Total Rating w/ Caps (All Players) )))`
 
+### Misc. Data
+Ratings
+The rating data in the .csv is in the following format: `Total Initial Rating - Total Rating w/Caps`. For example, `21-23` means that the total initial rating is `21` and the total rating with caps is `23`.
