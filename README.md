@@ -30,3 +30,25 @@ Once you're set up to use the git repository, get ready to start coding:
 5. Commit when desired
 6. Push when desired
 
+## Coding
+Your code should parse the input.csv file in the `materials` folder, calculate the Overall Rating, Badge Efficiency, and Attribute Efficiency, and output the data in a .csv matching the format of the output.csv. Optional: Output timing metrics to track how long your calculations took to complete, in seconds.
+
+### Formulae
+Overall Rating
+`Overall Rating Helper (Player) / Maximum Overall Rating Helper (All Players)`
+
+Badge Efficiency
+`Badge Efficiency Helper (Player) / Maximum Badge Efficiency Helper (All Players)`
+
+Attribute Efficiency
+`Attribute Efficiency Helper (Player) / Maximum Attribute Efficiency Helper (All Players)`
+
+Overall Rating Helper
+`(0.15 * (100 * (Total Initial Rating (Player) / Maximum Total Initial Rating (All Players)))) + (0.6 * (100 * (Total Rating w/ Caps (Player) / Maximum Total Rating w/ Caps (All Players))) + Badge Efficiency Helper (Player)`
+
+Badge Efficiency Helper
+`(5 * Count of HOF Badges) + (3 * Count of Gold Badges) + (2 * Count of Silver Badges) + (Count of Bronze Badges)`
+
+Attribute Efficiency Helper
+`(0.2 * (100 * (Total Initial Rating (Player) / Maximum Total Initial Rating (All Players)))) + (0.8 * (100 * Total Rating w/ Caps (Player) / Maximum Total Rating w/ Caps (All Players))))`
+
