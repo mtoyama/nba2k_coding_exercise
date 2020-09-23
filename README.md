@@ -44,11 +44,11 @@ Attribute Efficiency
 `Attribute Efficiency Helper (Player) / Maximum Attribute Efficiency Helper (All Players)`
 
 Overall Rating Helper
-`(0.15 * (100 * (Total Initial Rating (Player) / Maximum Total Initial Rating (All Players)))) + (0.6 * (100 * (Total Rating w/ Caps (Player) / Maximum Total Rating w/ Caps (All Players))) + Badge Efficiency Helper (Player)`
+`(0.15 * (100 * (Total Initial Rating (Player) / Maximum Total Initial Rating (All Players) ))) + (0.6 * (100 * (Total Rating w/ Caps (Player) / Maximum Total Rating w/ Caps (All Players) )) + Badge Efficiency Helper (Player)`
 
 Badge Efficiency Helper
 `(5 * Count of HOF Badges) + (3 * Count of Gold Badges) + (2 * Count of Silver Badges) + (Count of Bronze Badges)`
 
 Attribute Efficiency Helper
-`(0.2 * (100 * (Total Initial Rating (Player) / Maximum Total Initial Rating (All Players)))) + (0.8 * (100 * Total Rating w/ Caps (Player) / Maximum Total Rating w/ Caps (All Players))))`
+`(0.2 * (100 * (Total Initial Rating (Player) / Maximum Total Initial Rating (All Players) ))) + (0.8 * (100 * Total Rating w/ Caps (Player) / Maximum Total Rating w/ Caps (All Players) )))`
 
