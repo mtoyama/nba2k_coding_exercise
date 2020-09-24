@@ -49,6 +49,9 @@ To run your script, you must use the `ts-node` command from the root of the repo
 ## Coding
 Your code should parse the input.csv file in the `materials` folder, calculate the Overall Rating, Badge Efficiency, and Attribute Efficiency, and output the data in a .csv matching the format of the output.csv. Optional: Output timing metrics to track how long your calculations took to complete, in seconds.
 
+### Example starter code
+See `./materials/start.ts` for some example starter code that loads the input.csv and prints out its contents.
+
 ### Formulae
 Overall Rating
 `Overall Rating Helper (Player) / Maximum Overall Rating Helper (All Players)`
