@@ -22,12 +22,13 @@ First, you should choose an IDE for simplicity. I recommend using Visual Studio 
 - The name of the repository for setup is "nba2k_coding_exercise"
 3. Open the repository
 
-### JavaScript: Install Node
-Node allows us to run JavaScript scripts standalone and get access to various libraries.
+### TypeScript/JavaScript: Install Node
+Node allows us to run TypeScript/JavaScript scripts standalone and get access to various libraries.
 
 1. Install Node on your machine: https://nodejs.org/en/
 2. From the command line, navigate to the root of the git repository (where the README and package.json lie)
 3. Run `npm install`
+4. Restart VSCode
 
 You will now have any dependencies installed by other users and access to node libraries.
 
@@ -41,9 +42,9 @@ You will now have any dependencies installed by other users and access to node l
 7. When you are ready to merge your code, open a pull request from this page
 
 ### Running your script
-To run your script, you must use the `node` command from the root of the repository and point it to your main script file. E.g. on windows:
+To run your script, you must use the `ts-node` command from the root of the repository and point it to your main script file. E.g. on windows:
 
-`D:\Users\mtoyama\Documents\Coding\nba2k\nba2k_coding_exercise>node ./users/mtoyama/main.js`
+`D:\Users\mtoyama\Documents\Coding\nba2k\nba2k_coding_exercise>ts-node ./users/mtoyama/main.ts`
 
 ## Coding
 Your code should parse the input.csv file in the `materials` folder, calculate the Overall Rating, Badge Efficiency, and Attribute Efficiency, and output the data in a .csv matching the format of the output.csv. Optional: Output timing metrics to track how long your calculations took to complete, in seconds.
