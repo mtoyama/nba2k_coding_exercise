@@ -16,19 +16,34 @@ Through the exercise, you should utilize the following programming basics:
 ## Getting Started
 First, you should choose an IDE for simplicity. I recommend using Visual Studio Code: https://code.visualstudio.com/.
 
-Next, you will need to set up the git repostory
+### Git and IDE setup
 1. Sign up for git hub and log in: https://github.com
 2. Follow the VS Code git setup: https://code.visualstudio.com/docs/editor/github
 - The name of the repository for setup is "nba2k_coding_exercise"
 3. Open the repository
 
-Once you're set up to use the git repository, get ready to start coding:
+### JavaScript: Install Node
+Node allows us to run JavaScript scripts standalone and get access to various libraries.
+
+1. Install Node on your machine: https://nodejs.org/en/
+2. From the command line, navigate to the root of the git repository (where the README and package.json lie)
+3. Run `npm install`
+
+You will now have any dependencies installed by other users and access to node libraries.
+
+### Check out a branch and begin
 1. Open a terminal in VS Code
 2. Check out a new branch using `git checkout -b branch_name`
 3. Add a personal folder under "users" (e.g. users/michaelt)
 4. Add your code to the user folder
 5. Commit when desired
 6. Push when desired
+7. When you are ready to merge your code, open a pull request from this page
+
+### Running your script
+To run your script, you must use the `node` command from the root of the repository and point it to your main script file. E.g. on windows:
+
+`D:\Users\mtoyama\Documents\Coding\nba2k\nba2k_coding_exercise>node ./users/mtoyama/main.js`
 
 ## Coding
 Your code should parse the input.csv file in the `materials` folder, calculate the Overall Rating, Badge Efficiency, and Attribute Efficiency, and output the data in a .csv matching the format of the output.csv. Optional: Output timing metrics to track how long your calculations took to complete, in seconds.
