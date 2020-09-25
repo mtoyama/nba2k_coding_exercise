@@ -27,17 +27,42 @@ export class Player {
         key_badges: string,
         secondary_badges: string,
         attribute_array: [number, number][]) {
-            console.log("Creating player!")
             this.position = position;
             this.archetype = archetype;
             this.primary = primary;
             this.secondary = secondary;
             this.key_badges = key_badges;
             this.secondary_badges = secondary_badges;
+            this.hof_badge_count = 0;
+            this.gold_badge_count = 0;
+            this.silver_badge_count = 0;
+            this.bronze_badge_count = 0;
             this.attributes = new Attributes(attribute_array);
             this.total_att_initial = this.attributes.get_total_attribute_initial();
             this.total_att_w_caps = this.attributes.get_total_attribute_w_caps();
+            this.count_badges_in_string(this.key_badges);
+            this.count_badges_in_string(this.secondary_badges);
+            this.badge_efficiency_helper = this.calculate_badge_efficiency_helper();
         }
+
+    count_badges_in_string(string) {
+        this.hof_badge_count += string.toLowerCase().split("hof").length - 1;
+        this.gold_badge_count += string.toLowerCase().split("gold").length - 1;
+        this.silver_badge_count += string.toLowerCase().split("silver").length - 1;
+        this.bronze_badge_count += string.toLowerCase().split("bronze").length - 1;
+    }
+
+    calculate_overall_rating_helper(max_initial_rating: number, max_total_rating_w_caps: number) {
+        return (0.15 * (100 * (this.total_att_initial/max_initial_rating))) + (0.6 * (100 * (this.total_att_w_caps/max_total_rating_w_caps))) + this.badge_efficiency_helper
+    }
+
+    calculate_badge_efficiency_helper() {
+        return 5*this.hof_badge_count + 3*this.gold_badge_count + 2*this.silver_badge_count + this.bronze_badge_count
+    }
+
+    calculate_attribute_efficiency_helper(max_initial_rating: number, max_total_rating_w_caps: number) {
+        return (0.2 * (100 * (this.total_att_initial/max_initial_rating))) + (0.8 * (100 * (this.total_att_w_caps/max_total_rating_w_caps)))
+    }
 }
 
 class Attributes {
@@ -59,7 +84,6 @@ class Attributes {
     stamina: [number, number];
 
     constructor(attribute_array: [number, number][]) {
-        console.log("Creating attributes object!");
         this.layups = attribute_array[0];
         this.dunks = attribute_array[1];
         this.mid_range = attribute_array[2];
@@ -79,18 +103,14 @@ class Attributes {
     }
 
     get_total_attribute_initial() {
-        console.log("Calculating total attributes initial");
         let total = 0;
-        console.log(Object.values(this))
         for (let attribute_tuple of Object.values(this)) {
-            console.log(attribute_tuple)
             total = total + attribute_tuple[0]
         }
         return total
     }
 
     get_total_attribute_w_caps() {
-        console.log("Calculating total attributes with caps");
         let total = 0;
         for (let attribute_tuple of Object.values(this)) {
             total = total + attribute_tuple[1]

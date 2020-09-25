@@ -1,6 +1,8 @@
+export {};
+// Asynchronous
+
 const papaparse = require('papaparse');
 const fs = require('fs');
-
 const file = fs.createReadStream("./materials/input.csv");
 
 papaparse.parse(file, {
