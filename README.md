@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/mtoyama/nba2k_coding_exercise)
+
 # nba2k_coding_exercise
 Welcome to the repository for the NBA 2K coding exercise! 
 
