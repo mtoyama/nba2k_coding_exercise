@@ -44,15 +44,15 @@ You will now have any dependencies installed by other users and access to node l
 7. When you are ready to merge your code, open a pull request from this page
 
 ### Running your script
-To run your script, you must use the `ts-node` command from the root of the repository and point it to your main script file. E.g. on windows:
+To run your script, you must use the `npx ts-node` command from the root of the repository and point it to your main script file. E.g. on windows:
 
-`D:\Users\mtoyama\Documents\Coding\nba2k\nba2k_coding_exercise>ts-node ./users/mtoyama/main.ts`
+`D:\Users\mtoyama\Documents\Coding\nba2k\nba2k_coding_exercise>npx ts-node ./users/mtoyama/main.ts`
 
 ## Coding
 Your code should parse the input.csv file in the `materials` folder, calculate the Overall Rating, Badge Efficiency, and Attribute Efficiency, and output the data in a .csv matching the format of the output.csv. Optional: Output timing metrics to track how long your calculations took to complete, in seconds.
 
 ### Example starter code
-Beginner / simpler method: See `./materials/start_sync.ts` for some example starter code that loads the input.csv and prints out its contents.
+Beginner / simpler method: See `./materials/start_sync.ts` for some example starter code that loads the input.csv and prints out its contents. You can run the script by using `npx ts-node /materials/start_sync.ts`
 
 Intermediate / harder method: See `./materials/start_sync.ts` for an example of asynchronous csv parsing.
 
